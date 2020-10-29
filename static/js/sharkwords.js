@@ -62,8 +62,6 @@ const isLetterInWord = (letter) => {
   }
 
   return true;
-  
-
 
 
 };
@@ -72,6 +70,8 @@ const isLetterInWord = (letter) => {
 //
 const handleCorrectGuess = (letter) => {
   // Replace this with your code
+
+  $(`div.${letter}`).html(letter);
 };
 
 // Called when `letter` is not in word.
