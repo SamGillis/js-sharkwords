@@ -81,6 +81,12 @@ const handleCorrectGuess = (letter) => {
 //
 const handleWrongGuess = () => {
   // Replace this with your code
+  numWrong += 1
+  $('#shark-img img').attr('src', `/static/images/guess${numWrong}.png`)
+  if (numWrong === 5) {
+    $('button').attr('disabled', true)
+    $('#play-again').show()
+  }
 };
 
 //  Reset game state. Called before restarting the game.
